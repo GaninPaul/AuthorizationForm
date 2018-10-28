@@ -1,0 +1,362 @@
+@font-face {
+    font-family: Gotham;
+    src: url("./font/GothamPro.ttf");
+}
+html, body{
+    background-size: 100%;
+    background: #ed4159 url("./img/background.jpg") no-repeat;
+    overflow-x: hidden;
+    height: 100vh;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+}
+@media only screen  and (min-width: 1921px) {
+    html, body{
+        background-size: 100%;
+        background: #ed4159 url("./img/background@2x.jpg") no-repeat;
+        overflow-x: hidden;
+        height: 100vh;
+        margin: 0 0 0 0;
+        padding: 0 0 0 0;
+    }
+}
+@media only screen  and (min-width: 3841px) {
+    html, body{
+        background-size: 100%;
+        background: #ed4159 url("./img/background@3x.jpg") no-repeat;
+        overflow-x: hidden;
+        height: 100vh;
+        margin: 0 0 0 0;
+        padding: 0 0 0 0;
+    }
+}
+
+
+.container{
+    width: 100%;
+    height: 100%;
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: auto 600px auto;
+    grid-template-rows: auto 409px auto;
+
+}
+.loginBox{
+    width: 100%;
+    grid-column: 2;
+    grid-row: 2;
+}
+.Logo_Container{
+    grid-column: 2;
+    grid-row: 1;
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-rows: auto 49px auto;
+}
+.Logo{
+    height: auto;
+    text-align: center;
+    grid-row: 2;
+}
+.logout_grid{
+    width: auto;
+    height: 100%;
+    border-radius: 8px;
+    box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.15);
+    background-color: #ffffff;
+    margin-left: 16px;
+    margin-right: 16px;
+
+    padding: 0 0 0 0;
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: 45% 25% 30%;
+}
+.Name {
+    width: auto;
+    height: 34px;
+    opacity: 0.8;
+    font-family: Gotham;
+    font-size: 28px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 0;
+    text-align: center;
+    color: #262626;
+    grid-column: 2;
+    grid-row: 2;
+    margin-bottom: 56px;
+    margin-top: 40px;
+}
+.submit_btn_box_logout{
+    width: auto;
+    grid-column: 2;
+    grid-row: 3;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 60px;
+}
+
+.Rectangle-3 {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.15);
+    background-color: #ffffff;
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: 5% 90% 5%;
+    grid-template-rows: 20% 20% 20% 20%;
+}
+.input_box_pass{
+    width: auto;
+    padding-right: 33px;
+    grid-column: 2;
+    grid-row: 3;
+}
+.login_text{
+
+    opacity: 0.8;
+    font-family: Gotham;
+    font-size: 24px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 0;
+    text-align: center;
+    color: #262626;
+    width: 100%;
+    grid-column: 2;
+    grid-row: 1;
+    margin-top: 48px;
+    margin-bottom: 48px;
+}
+
+
+button:hover{
+    border-radius: 100px;
+    box-shadow: 0 6px 20px 0 rgba(237, 65, 89, 0.4);
+    background-color: #ffffff;
+    font-family: Gotham;
+    font-size: 14px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #ed4159;
+}
+
+button:active{
+    border-radius: 100px;
+    box-shadow: 0 2px 10px 0 rgba(237, 65, 89, 0.5);
+    background-color: #ffffff;
+    font-family: Gotham;
+    font-size: 14px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #ed4159;
+}
+.submit_btn {
+    width: 145px;
+    height: 48px;
+    border-radius: 100px;
+    box-shadow: 0 4px 16px 0 rgba(237, 65, 89, 0.4);
+    background-color: #ed4159;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    font-family: Gotham;
+    font-size: 14px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.96);
+}
+.submit_btn_box{
+    margin-right: auto;
+    margin-left: auto;
+    grid-column: 2;
+    grid-row: 5;
+    padding-bottom: 60px;
+    padding-top: 48px;
+}
+.Text {
+    width: 76px;
+    height: 16px;
+    font-family: Gotham;
+    font-size: 14px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #ed4159;
+}
+
+.input_box{
+    width: auto;
+    padding-bottom: 32px;
+    padding-right: 33px;
+    grid-column: 2;
+    grid-row: 2;
+}
+::placeholder {
+    color: #262626;
+    opacity: 0.4;
+}
+.InInput {
+    width: 100%;
+    height: 48px;
+    padding-left: 16px;
+    padding-right: 16px;
+    opacity: 0.8;
+    font-family: Gotham;
+    font-size: 16px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #262626;
+
+    border-radius: 4px;
+    border: solid 1px rgba(151, 151, 151, 0.25);
+    background-color: #f1f1f1;;
+}
+
+.Oval-2 {
+
+    width: 128px;
+    height: 128px;
+    border: solid 1px #979797;
+    border-radius: 64px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 48px;
+    grid-column: 2;
+    grid-row: 1;
+}
+.center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+
+#error_box{
+    width: auto;
+    grid-column: 2;
+    grid-row: 4;
+    margin-top: 32px;
+
+    border-radius: 4px;
+    background-color: rgba(237, 65, 89, 0.25);
+    font-family: Gotham;
+    font-size: 14px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    padding: 11px 16px 9px;
+    color: #ed4159;
+}
+
+@media (max-width:499px){
+    .Rectangle-3 {
+        width: auto;
+        height: auto;
+        margin-left: 16px;
+        margin-right: 16px;
+        border-radius: 8px;
+        box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.15);
+        background-color: #ffffff;
+    }
+
+    .container{
+        width: 100%;
+        height: 100vh;
+        padding: 0 0 0 0;
+        margin: 0 0 0 0;
+        display: grid;
+        grid-auto-flow: row;
+        grid-template-columns: auto 95% auto;
+        grid-template-rows: auto 60% auto;
+
+    }
+    .loginBox{
+        width: 100%;
+        padding-right: 32px;
+        grid-column: 2;
+        grid-row: 2;
+    }
+    .Logo_Container{
+        grid-column: 2;
+        grid-row: 1;
+        display: grid;
+        grid-auto-flow: row;
+        grid-template-rows: auto 49px auto;
+    }
+    .Logo{
+        height: auto;
+        text-align: center;
+        grid-row: 2;
+    }
+    .InInput {
+        width: 100%;
+        height: 48px;
+
+        padding-left: 16px;
+        padding-right: 16px;
+
+        opacity: 0.8;
+        font-family: Gotham;
+        font-size: 16px;
+        font-weight: 500;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: #262626;
+
+        border-radius: 4px;
+        border: solid 1px rgba(151, 151, 151, 0.25);
+        background-color: #f1f1f1;;
+    }
+    .login_text{
+        width: auto;
+        margin: 0 0 0 0;
+        padding: 32px 0;
+        opacity: 0.8;
+        font-family: Gotham;
+        font-size: 24px;
+        font-weight: bold;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        text-align: center;
+        color: #262626;
+    }
+
+    .input_box{
+        width: auto;
+        padding-bottom: 32px;
+        padding-right: 32px;
+    }
+}

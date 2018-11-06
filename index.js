@@ -65,7 +65,7 @@ function onReadyState() {
                 '                    <img class="Oval-2" src="' + request.photoUrl + '" />\n' +
                 '                    <div class="Name">' + request.name + '</div>\n' +
                 '                    <div class="submit_btn_box_logout">\n' +
-                '                        <button id="logout_btn" class="submit_btn">Login</button>\n' +
+                '                        <button id="logout_btn" class="submit_btn">Logout</button>\n' +
                 '                    </div>\n' +
                 '                </div>';
 
@@ -86,7 +86,7 @@ function onReadyState() {
 * Main function
 */
 function main() {
-    error_box.hidden = true;
+    document.getElementById('error_box').hidden = true;
     authorization_form.onsubmit = function onSubmit() {
         let submit_btn = document.getElementById('submit_btn');
         submit_btn.setAttribute("disabled", "disabled");

@@ -73,8 +73,17 @@ function onReadyState() {
                 document.getElementById('error_box').hidden = true;
                 authorization_form.innerHTML = AuthorizationForm;
             });
-        } else {
+        } else if (xhr.status === 400) {
             incorrectEmailPass();
+        } else if (xhr.status === 403) {
+            error_box.hidden = false;
+            error_box.innerText = '403: Forbidden!';
+        } else if (xhr.status === 500) {
+            error_box.hidden = false;
+            error_box.innerText = '500: Internal Server Error!';
+        } else {
+            error_box.hidden = false;
+            error_box.innerText = 'Something went wrong!';
         }
     } else {
         error_box.hidden = false;

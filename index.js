@@ -100,6 +100,7 @@ function main() {
         let submit_btn = document.getElementById('submit_btn');
         submit_btn.setAttribute("disabled", "disabled");
         xhr = new XMLHttpRequest();
+        xhr.timeout = 2000;
         xhr.open("POST", 'https://us-central1-mercdev-academy.cloudfunctions.net/login', true);
         xhr.setRequestHeader("Content-type", "application/json");
         xhr.onreadystatechange = onReadyState;

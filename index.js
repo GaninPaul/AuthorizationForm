@@ -70,9 +70,9 @@ function request(xhr) {
         xhr.onreadystatechange = function () {
             if (xhr.readyState === 4) {
                 if (xhr.status >= 200 && xhr.status < 300) {
-                    resolve(xhr.response)
+                    resolve(xhr.response);
                 } else {
-                    reject(xhr.status)
+                    reject(xhr.status);
                 }
             } else {
                 error_box.hidden = false;
@@ -83,6 +83,7 @@ function request(xhr) {
     });
 }
 
+
 /**
  * Success login
  * @param data
@@ -90,13 +91,13 @@ function request(xhr) {
 function successLogin(data) {
     let request = JSON.parse(data);
     authorization_form.innerHTML =
-        '<div class="logout_grid">' +
-        '<img class="Oval-2" src="' + request.photoUrl + '" />' +
-        '<div class="Name">' + request.name + '</div>' +
-        '<div class="submit_btn_box_logout">\n' +
-        '<button id="logout_btn" class="submit_btn">Logout</button>' +
-        '</div>' +
-        '</div>';
+        `<div class="logout_grid">
+        <img class="Oval-2" src="${request.photoUrl}" />
+        <div class="Name">${request.name}</div>
+        <div class="submit_btn_box_logout">
+        <button id="logout_btn" class="submit_btn">Logout</button>
+        </div>
+        </div>`;
     document.getElementById('logout_btn').addEventListener('click', function () {
         document.getElementById('error_box').hidden = true;
         authorization_form.innerHTML = AuthorizationForm;

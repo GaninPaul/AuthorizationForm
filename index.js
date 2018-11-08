@@ -112,21 +112,34 @@ function successLogin(data) {
  */
 
 /**
+ * Async function to make request
+ */
+async function asyncRequest(xhr) {
+    let request_data = await request(xhr);
+    successLogin(request_data);
+}
+
+/**
  * Fail login
  * @param error_code
  */
 function failLogin(error_code) {
-    if (error_code === 400) {
-        incorrectEmailPass();
-    } else if (error_code === 403) {
-        error_box.hidden = false;
-        error_box.innerText = '403: Forbidden!';
-    } else if (error_code === 500) {
-        error_box.hidden = false;
-        error_box.innerText = '500: Internal Server Error!';
-    } else {
-        error_box.hidden = false;
-        error_box.innerText = 'Something went wrong!';
+    switch (error_code) {
+        case 403:
+            error_box.hidden = false;
+            error_box.innerText = '403: Forbidden!';
+            break;
+        case 500:
+            error_box.hidden = false;
+            error_box.innerText = '500: Internal Server Error!';
+            break;
+        case 400:
+            incorrectEmailPass();
+            break;
+        default:
+            error_box.hidden = false;
+            error_box.innerText = 'Something went wrong!';
+            break;
     }
 }
 
@@ -144,12 +157,11 @@ function main() {
 
         if (email_form.value.length < 5)
             formValidationError('email', 'Email too short');
-
         else if (password_form.value.length < 4)
             formValidationError('password', 'Password is too short');
 
         if (email_form.value.length >= 5 && password_form.value.length >= 4)
-            request(xhr).then(successLogin).catch(failLogin);
+            asyncRequest(xhr).catch(failLogin);//request(xhr).then(successLogin).catch(failLogin);
 
         submit_btn.removeAttribute("disabled");
         return false;

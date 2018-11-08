@@ -3,6 +3,10 @@
     src: url("./font/GothamPro-Bold.ttf");
 }
 
+* {
+    font-family: Gotham, serif;
+}
+
 html, body {
     background-size: 100%;
     background: #ed4159 url("./img/background.jpg") no-repeat;
@@ -34,7 +38,7 @@ html, body {
     }
 }
 
-.container {
+.application-main {
     width: 100%;
     height: 100%;
     padding: 0 0 0 0;
@@ -46,13 +50,13 @@ html, body {
 
 }
 
-.loginBox {
+.login-container {
     width: 100%;
     grid-column: 2;
     grid-row: 2;
 }
 
-.Logo_Container {
+.logo-container {
     grid-column: 2;
     grid-row: 1;
     display: grid;
@@ -60,35 +64,17 @@ html, body {
     grid-template-rows: auto 49px auto;
 }
 
-.Logo {
+.logo-svg {
     height: auto;
     text-align: center;
     grid-row: 2;
 }
 
-.logout_grid {
-    width: auto;
-    height: 100%;
-    border-radius: 8px;
-    box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.15);
-    background-color: #ffffff;
-    padding: 0 0 0 0;
-    display: grid;
-    grid-auto-flow: row;
-    grid-template-columns: auto auto auto;
-}
-
-.Name {
+.rounded-rectangle-user-name {
     width: auto;
     height: 34px;
     opacity: 0.8;
-    font-family: Gotham;
     font-size: 28px;
-    font-weight: bold;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: normal;
-    letter-spacing: 0;
     text-align: center;
     color: #262626;
     grid-column: 2;
@@ -97,7 +83,7 @@ html, body {
     margin-top: 40px;
 }
 
-.submit_btn_box_logout {
+.submit-box-logout {
     width: auto;
     grid-column: 2;
     grid-row: 3;
@@ -106,7 +92,7 @@ html, body {
     margin-bottom: 60px;
 }
 
-.Rectangle-3 {
+.rounded-rectangle {
     width: 100%;
     height: 100%;
     border-radius: 8px;
@@ -117,23 +103,16 @@ html, body {
     grid-template-columns: 5% 90% 5%;
 }
 
-.input_box_pass {
+.input-box-for-pass {
     width: auto;
     padding-right: 33px;
     grid-column: 2;
     grid-row: 3;
 }
 
-.login_text {
-
+.rounded-rectangle-header-logo {
     opacity: 0.8;
-    font-family: Gotham;
     font-size: 24px;
-    font-weight: bold;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: normal;
-    letter-spacing: 0;
     text-align: center;
     color: #262626;
     width: 100%;
@@ -147,13 +126,8 @@ button:hover {
     border-radius: 100px;
     box-shadow: 0 6px 20px 0 rgba(237, 65, 89, 0.4);
     background-color: #ffffff;
-    font-family: Gotham;
     font-size: 14px;
     font-weight: 500;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: normal;
-    letter-spacing: normal;
     text-align: center;
     color: #ed4159;
 }
@@ -162,37 +136,24 @@ button:active {
     border-radius: 100px;
     box-shadow: 0 2px 10px 0 rgba(237, 65, 89, 0.5);
     background-color: #ffffff;
-    font-family: Gotham;
     font-size: 14px;
-    font-weight: 500;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: normal;
-    letter-spacing: normal;
     text-align: center;
     color: #ed4159;
 }
 
-.submit_btn {
+.submit-btn {
     width: 145px;
     height: 48px;
     border-radius: 100px;
     box-shadow: 0 4px 16px 0 rgba(237, 65, 89, 0.4);
     background-color: #ed4159;
     border: 1px solid transparent;
-    white-space: nowrap;
-    font-family: Gotham;
     font-size: 14px;
-    font-weight: 500;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: normal;
-    letter-spacing: normal;
     text-align: center;
     color: rgba(255, 255, 255, 0.96);
 }
 
-.submit_btn_box {
+.submit-box {
     margin-right: auto;
     margin-left: auto;
     grid-column: 2;
@@ -201,21 +162,7 @@ button:active {
     padding-top: 48px;
 }
 
-.Text {
-    width: 76px;
-    height: 16px;
-    font-family: Gotham;
-    font-size: 14px;
-    font-weight: 500;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    text-align: center;
-    color: #ed4159;
-}
-
-.input_box {
+.input-box-for-email {
     width: auto;
     padding-bottom: 32px;
     padding-right: 33px;
@@ -228,28 +175,20 @@ button:active {
     opacity: 0.4;
 }
 
-.InInput {
+.input {
     width: 100%;
     height: 45px;
     padding-left: 16px;
     padding-right: 16px;
     opacity: 0.8;
-    font-family: Gotham;
     font-size: 16px;
-    font-weight: 500;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: normal;
-    letter-spacing: normal;
     color: #262626;
-
     border-radius: 4px;
     border: solid 1px rgba(151, 151, 151, 0.25);
     background-color: #f1f1f1;;
 }
 
-.Oval-2 {
-
+.rounded-rectangle-user-photo {
     width: 128px;
     height: 128px;
     border: solid 1px #979797;
@@ -261,39 +200,25 @@ button:active {
     grid-row: 1;
 }
 
-.center {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%)
-}
-
-#error_box {
+#error-box {
     width: auto;
     grid-column: 2;
     grid-row: 4;
     margin-top: 32px;
     border-radius: 4px;
     background-color: rgba(237, 65, 89, 0.25);
-    font-family: Gotham;
     font-size: 16px;
-    font-weight: 500;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: normal;
-    letter-spacing: normal;
     padding: 11px 16px;
     color: #ed4159;
 }
 
 @media (max-width: 600px) {
-    .Rectangle-3 {
+    .rounded-rectangle {
         width: auto;
         height: auto;
         margin-left: 16px;
         margin-right: 16px;
-        padding: 0 16px 0 16px;
+        padding: 0 24px 0 24px;
         border-radius: 8px;
         box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.15);
         background-color: #ffffff;
@@ -302,44 +227,13 @@ button:active {
         grid-template-columns: auto 100% auto;
     }
 
-    .Name {
-        width: auto;
-        height: 19px;
+    #error-box {
+        font-size: 12px;
         opacity: 0.8;
-        font-family: Gotham;
-        font-size: 19px;
-        font-weight: bold;
-        font-style: normal;
-        font-stretch: normal;
-        line-height: normal;
-        letter-spacing: 0;
-        text-align: center;
-        color: #262626;
-        grid-column: 2;
-        grid-row: 2;
-        margin-bottom: 42px;
-        margin-top: 22px;
+        margin-top: 24px;
     }
 
-    .submit_btn_box {
-        margin-right: auto;
-        margin-left: auto;
-        grid-column: 2;
-        grid-row: 5;
-        padding-bottom: 48px;
-        padding-top: 40px;
-    }
-
-    .submit_btn_box_logout {
-        width: auto;
-        grid-column: 2;
-        grid-row: 3;
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 48px;
-    }
-
-    .container {
+    .application-main {
         width: 100%;
         height: 100vh;
         padding: 0 0 0 0;
@@ -351,80 +245,54 @@ button:active {
 
     }
 
-    .loginBox {
-        width: 100%;
-        padding-right: 32px;
-        grid-column: 2;
-        grid-row: 2;
-    }
-
-    .Logo_Container {
-        grid-column: 2;
-        grid-row: 1;
-        display: grid;
-        grid-auto-flow: row;
-        grid-template-rows: auto 49px auto;
-    }
-
-    .Logo {
-        height: auto;
-        text-align: center;
-        grid-row: 2;
-    }
-
-    .InInput {
-        width: 100%;
-        height: 48px;
-
-        padding-left: 16px;
-        padding-right: 16px;
-
-        opacity: 0.8;
-        font-family: Gotham;
-        font-size: 16px;
-        font-weight: 500;
-        font-style: normal;
-        font-stretch: normal;
-        line-height: normal;
-        letter-spacing: normal;
-        color: #262626;
-
-        border-radius: 4px;
-        border: solid 1px rgba(151, 151, 151, 0.25);
-        background-color: #f1f1f1;;
-    }
-
-    .logout_grid {
-        width: auto;
-        height: auto;
-        margin-left: 16px;
-        margin-right: 16px;
-        border-radius: 8px;
-        box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.15);
-        background-color: #ffffff;
-        padding: 0 0 0 0;
-        display: grid;
-        grid-auto-flow: row;
-        grid-template-columns: auto auto auto;
-        grid-template-rows: auto;
-    }
-
-    .login_text {
+    .rounded-rectangle-header-logo {
         width: auto;
         margin: 0 0 0 0;
         padding: 32px 0;
         opacity: 0.8;
-        font-family: Gotham;
-        font-size: 24px;
-        font-weight: bold;
-        font-style: normal;
-        font-stretch: normal;
-        line-height: normal;
+        font-size: 20px;
         text-align: center;
         color: #262626;
     }
 
-    .Oval-2 {
+    .submit-box-logout {
+        width: auto;
+        grid-column: 2;
+        grid-row: 3;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 48px;
+    }
+
+    .input-box-for-email {
+        width: auto;
+        padding-bottom: 24px;
+        padding-right: 32px;
+    }
+
+    .rounded-rectangle-user-name {
+        width: auto;
+        height: 19px;
+        opacity: 0.8;
+        font-size: 19px;
+        text-align: center;
+        color: #262626;
+        grid-column: 2;
+        grid-row: 2;
+        margin-bottom: 42px;
+        margin-top: 22px;
+    }
+
+    .submit-box {
+        margin-right: auto;
+        margin-left: auto;
+        grid-column: 2;
+        grid-row: 5;
+        padding-bottom: 48px;
+        padding-top: 40px;
+    }
+
+    .rounded-rectangle-user-photo {
         width: 86px;
         height: 86px;
         border: solid 1px #979797;
@@ -436,9 +304,16 @@ button:active {
         grid-row: 1;
     }
 
-    .input_box {
-        width: auto;
-        padding-bottom: 24px;
-        padding-right: 32px;
+    .input {
+        width: 100%;
+        height: 44px;
+        padding-left: 16px;
+        padding-right: 16px;
+        opacity: 0.8;
+        font-size: 16px;
+        color: #262626;
+        border-radius: 4px;
+        border: solid 1px rgba(151, 151, 151, 0.25);
+        background-color: #f1f1f1;;
     }
 }

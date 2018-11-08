@@ -2,26 +2,24 @@
  * Constants
  */
 const AuthorizationForm =
-    `<div class="Rectangle-3">
-
-                <div class="login_text">Log in</div>
-                <div class="input_box">
-                    <input id="email" type="text" class="InInput" placeholder="Email" autofocus/>
+    `<div class="rounded-rectangle">
+                <div class="rounded-rectangle-header-logo">Log in</div>
+                <div class="input-box-for-email">
+                    <input id="email" type="email" class="input" placeholder="E-mail" autofocus/>
                 </div>
-                <div class="input_box_pass">
-                    <input id="password" type="password" class="InInput" placeholder="Password"/>
+                <div class="input-box-for-pass">
+                    <input id="password" type="password" class="input" placeholder="Password"/>
                 </div>
-                <div id="error_box"></div>
-                <div class="submit_btn_box">
-                    <button id="submit_btn" type="submit" class="submit_btn">Login</button>
+                <div id="error-box"></div>
+                <div class="submit-box">
+                    <button id="submit_btn" type="submit" class="submit-btn">Login</button>
                 </div>
-
-        </div>`;
+            </div>`;
 
 /**
  * Variables
  */
-let error_box = document.getElementById('error_box');
+let error_box = document.getElementById('error-box');
 let email_form = document.getElementById('email');
 let password_form = document.getElementById('password');
 let authorization_form = document.getElementById("authorization-form");
@@ -91,15 +89,15 @@ function request(xhr) {
 function successLogin(data) {
     let request = JSON.parse(data);
     authorization_form.innerHTML =
-        `<div class="logout_grid">
-        <img class="Oval-2" src="${request.photoUrl}" />
-        <div class="Name">${request.name}</div>
-        <div class="submit_btn_box_logout">
-        <button id="logout_btn" class="submit_btn">Logout</button>
-        </div>
+        `<div class="rounded-rectangle">
+            <img class="rounded-rectangle-user-photo" src="${request.photoUrl}" />
+            <div class="rounded-rectangle-user-name">${request.name}</div>
+            <div class="submit-box-logout">
+                <button id="logout_btn" class="submit-btn">Logout</button>
+            </div>
         </div>`;
     document.getElementById('logout_btn').addEventListener('click', function () {
-        document.getElementById('error_box').hidden = true;
+        document.getElementById('error-box').hidden = true;
         authorization_form.innerHTML = AuthorizationForm;
     });
 }
@@ -147,7 +145,7 @@ function failLogin(error_code) {
  * Main function
  */
 function main() {
-    document.getElementById('error_box').hidden = true;
+    document.getElementById('error-box').hidden = true;
     authorization_form.onsubmit = function onSubmit() {
         let submit_btn = document.getElementById('submit_btn');
         let xhr = new XMLHttpRequest();
